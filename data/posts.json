@@ -1,9 +1,9 @@
 [
     {
         "id": 1,
-        "username": "johndoe",
-        "profile_pic": "images/profile1.jpg",
-        "image": "images/photo1.jpg",
+        "username": "cozy_kate",
+        "profile_pic": "images/profil_pic/1.webp",
+        "image": "images/posts_images/1.webp",
         "text": "Profiter d'une journée ensoleillée !",
         "reactions": {
             "like": 10,
@@ -14,9 +14,9 @@
     },
     {
         "id": 2,
-        "username": "janedoe",
-        "profile_pic": "images/profile2.jpg",
-        "image": null,
+        "username": "lucasglow78",
+        "profile_pic": "images/profil_pic/2.webp",
+        "image": "images/posts_images/2.webp",
         "text": "Découverte de nouveaux horizons.",
         "reactions": {
             "like": 5,
@@ -27,9 +27,9 @@
     },
     {
         "id": 3,
-        "username": "charlieb",
-        "profile_pic": "images/profile3.jpg",
-        "image": "images/photo2.jpg",
+        "username": "sultan_vibees",
+        "profile_pic": "images/profil_pic/3.webp",
+        "image": "images/posts_images/3.webp",
         "text": "Un moment de détente au bord de la mer.",
         "reactions": {
             "like": 12,
@@ -40,9 +40,9 @@
     },
     {
         "id": 4,
-        "username": "emilyc",
-        "profile_pic": "images/profile4.jpg",
-        "image": "images/photo3.jpg",
+        "username": "grace.ilyy",
+        "profile_pic": "images/profil_pic/4.webp",
+        "image": "images/posts_images/4.webp",
         "text": "Un café pour bien commencer la journée ☕",
         "reactions": {
             "like": 25,
@@ -53,9 +53,9 @@
     },
     {
         "id": 5,
-        "username": "davem",
-        "profile_pic": "images/profile5.jpg",
-        "image": null,
+        "username": "tin.emma47",
+        "profile_pic": "images/profil_pic/5.webp",
+        "image": "images/posts_images/5.webp",
         "text": "Lecture du soir : un bon roman.",
         "reactions": {
             "like": 8,
@@ -66,9 +66,9 @@
     },
     {
         "id": 6,
-        "username": "lucyw",
-        "profile_pic": "images/profile6.jpg",
-        "image": "images/photo4.jpg",
+        "username": "tuyomansi",
+        "profile_pic": "images/profil_pic/6.webp",
+        "image": "images/posts_images/6.jpg",
         "text": "Randonnée dans les montagnes aujourd'hui 🌄",
         "reactions": {
             "like": 30,
@@ -79,9 +79,9 @@
     },
     {
         "id": 7,
-        "username": "jacksonh",
-        "profile_pic": "images/profile7.jpg",
-        "image": "images/photo5.jpg",
+        "username": "nadia.diana",
+        "profile_pic": "images/profil_pic/7.webp",
+        "image": "images/posts_images/7.webp",
         "text": "Art urbain impressionnant !",
         "reactions": {
             "like": 15,
@@ -92,9 +92,9 @@
     },
     {
         "id": 8,
-        "username": "ninaf",
-        "profile_pic": "images/profile8.jpg",
-        "image": "images/photo6.jpg",
+        "username": "ninaf88",
+        "profile_pic": "images/profil_pic/8.webp",
+        "image": "images/posts_images/8.webp",
         "text": "Soirée coucher de soleil.",
         "reactions": {
             "like": 22,
@@ -105,9 +105,9 @@
     },
     {
         "id": 9,
-        "username": "robertl",
-        "profile_pic": "images/profile9.jpg",
-        "image": null,
+        "username": "_xanderrrr",
+        "profile_pic": "images/profil_pic/9.webp",
+        "image": "images/posts_images/9.webp",
         "text": "Prêt pour un marathon demain ! 🏃‍♂️",
         "reactions": {
             "like": 14,
@@ -118,9 +118,9 @@
     },
     {
         "id": 10,
-        "username": "amandaj",
-        "profile_pic": "images/profile10.jpg",
-        "image": "images/photo7.jpg",
+        "username": "Chic_iman",
+        "profile_pic": "images/profil_pic/10.webp",
+        "image": "images/posts_images/10.webp",
         "text": "Week-end en nature 🌲",
         "reactions": {
             "like": 18,

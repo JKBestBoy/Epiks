@@ -113,9 +113,13 @@ header {
 
 /* Image du post */
 .post-image {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+    width: 100%;            /* Prend toute la largeur de l'élément parent */
+    max-width: 600px;       /* Limite la largeur maximale à 600px */
+    height: 500px;          /* Hauteur fixe de 500px pour garder l'uniformité */
+    object-fit: cover;      /* Centre l'image et coupe les bords si nécessaire */
+    border-radius: 10px;    /* Arrondit les coins */
+    margin: 10px 0;         /* Espace autour de l'image */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Ajoute une ombre douce */
 }
 
 /* Footer du post avec les réactions */

@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "username": "johndoe",
+        "profile_pic": "images/profile1.jpg",
+        "image": "images/photo1.jpg",
+        "text": "Profiter d'une journée ensoleillée !",
+        "reactions": {
+            "like": 10,
+            "dislike": 2,
+            "love": 15
+        },
+        "comments": ["Superbe photo !", "Ça donne envie d'y être !"]
+    },
+    {
+        "id": 2,
+        "username": "janedoe",
+        "profile_pic": "images/profile2.jpg",
+        "image": null,
+        "text": "Découverte de nouveaux horizons.",
+        "reactions": {
+            "like": 5,
+            "dislike": 1,
+            "love": 8
+        },
+        "comments": ["Magnifique !", "Où est-ce que c'est ?"]
+    },
+    {
+        "id": 3,
+        "username": "charlieb",
+        "profile_pic": "images/profile3.jpg",
+        "image": "images/photo2.jpg",
+        "text": "Un moment de détente au bord de la mer.",
+        "reactions": {
+            "like": 12,
+            "dislike": 0,
+            "love": 20
+        },
+        "comments": ["C'est tellement relaxant.", "Ça a l'air paisible."]
+    },
+    {
+        "id": 4,
+        "username": "emilyc",
+        "profile_pic": "images/profile4.jpg",
+        "image": "images/photo3.jpg",
+        "text": "Un café pour bien commencer la journée ☕",
+        "reactions": {
+            "like": 25,
+            "dislike": 3,
+            "love": 18
+        },
+        "comments": ["J'adore cette ambiance !", "Le café a l'air délicieux."]
+    },
+    {
+        "id": 5,
+        "username": "davem",
+        "profile_pic": "images/profile5.jpg",
+        "image": null,
+        "text": "Lecture du soir : un bon roman.",
+        "reactions": {
+            "like": 8,
+            "dislike": 0,
+            "love": 11
+        },
+        "comments": ["Quel livre lis-tu ?", "Rien de tel qu'une lecture au calme."]
+    },
+    {
+        "id": 6,
+        "username": "lucyw",
+        "profile_pic": "images/profile6.jpg",
+        "image": "images/photo4.jpg",
+        "text": "Randonnée dans les montagnes aujourd'hui 🌄",
+        "reactions": {
+            "like": 30,
+            "dislike": 2,
+            "love": 25
+        },
+        "comments": ["Quelle vue magnifique !", "Je rêve de faire ça."]
+    },
+    {
+        "id": 7,
+        "username": "jacksonh",
+        "profile_pic": "images/profile7.jpg",
+        "image": "images/photo5.jpg",
+        "text": "Art urbain impressionnant !",
+        "reactions": {
+            "like": 15,
+            "dislike": 1,
+            "love": 19
+        },
+        "comments": ["Le street art est toujours fascinant.", "Où est-ce que tu as pris cette photo ?"]
+    },
+    {
+        "id": 8,
+        "username": "ninaf",
+        "profile_pic": "images/profile8.jpg",
+        "image": "images/photo6.jpg",
+        "text": "Soirée coucher de soleil.",
+        "reactions": {
+            "like": 22,
+            "dislike": 0,
+            "love": 28
+        },
+        "comments": ["Le ciel est magnifique !", "C'est tellement apaisant."]
+    },
+    {
+        "id": 9,
+        "username": "robertl",
+        "profile_pic": "images/profile9.jpg",
+        "image": null,
+        "text": "Prêt pour un marathon demain ! 🏃‍♂️",
+        "reactions": {
+            "like": 14,
+            "dislike": 0,
+            "love": 17
+        },
+        "comments": ["Bonne chance !", "On est avec toi !"]
+    },
+    {
+        "id": 10,
+        "username": "amandaj",
+        "profile_pic": "images/profile10.jpg",
+        "image": "images/photo7.jpg",
+        "text": "Week-end en nature 🌲",
+        "reactions": {
+            "like": 18,
+            "dislike": 1,
+            "love": 22
+        },
+        "comments": ["Ça a l'air incroyable !", "Tu profites bien !"]
+    }
+]

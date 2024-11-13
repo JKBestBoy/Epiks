@@ -1,0 +1,173 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e5ec;
+    color: #333;
+    margin: 0;
+    display: flex;
+}
+
+/* Barre de navigation principale */
+header {
+    background-color: #e0e5ec;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 190px; /* Décalage pour éviter la sidebar */
+    width: calc(100% - 220px); /* Réduit la largeur pour ne pas recouvrir la sidebar */
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Lien et style du titre dans le header */
+.title-link {
+    text-decoration: none;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Lien du profil dans le header */
+.profile-link {
+    position: absolute;
+    right: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 150px;
+    padding: 20px;
+    box-shadow: inset 4px 4px 8px #c9ced6, inset -4px -4px 8px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #e0e5ec;
+}
+
+/* Liens dans la sidebar */
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 10px 20px; /* Ajouter un padding latéral pour mieux centrer */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+    width: auto; /* Ajuster la largeur pour qu'elle prenne en compte le contenu */
+    display: flex;
+    justify-content: center; /* Centre le texte dans le bouton */
+}
+
+/* Zone de feed */
+#feed {
+    flex: 1;
+    max-width: 600px;
+    margin: 100px auto 20px auto; /* Espace entre le header et le feed */
+    display: flex;
+    flex-direction: column;
+    padding-left: 170px; /* Espace pour le menu latéral */
+}
+
+/* Style des posts */
+.post {
+    background-color: #e0e5ec;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #c9ced6, -8px -8px 16px #ffffff;
+}
+
+/* Header du post */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Image du post */
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+}
+
+/* Footer du post avec les réactions */
+.reactions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.reaction-button {
+    background-color: #e0e5ec;
+    border: none;
+    box-shadow: 2px 2px 4px #c9ced6, -2px -2px 4px #ffffff;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.reaction-button:active {
+    box-shadow: inset 2px 2px 4px #c9ced6, inset -2px -2px 4px #ffffff;
+}
+
+/* Affichage plein écran pour les images */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Section des commentaires */
+.comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comment {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}

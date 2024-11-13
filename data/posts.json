@@ -10,7 +10,16 @@
             "dislike": 2,
             "love": 15
         },
-        "comments": ["Superbe photo !", "Ça donne envie d'y être !"]
+        "comments": [
+            {
+                "username": "john_doe ",
+                "text": "Superbe photo !"
+            },
+            {
+                "username": "jane_smith ",
+                "text": "Ça donne envie d'y être !"
+            }
+        ]
     },
     {
         "id": 2,
@@ -23,7 +32,16 @@
             "dislike": 1,
             "love": 8
         },
-        "comments": ["Magnifique !", "Où est-ce que c'est ?"]
+        "comments": [
+            {
+                "username": "mark_twain ",
+                "text": "Magnifique !"
+            },
+            {
+                "username": "claire_b ",
+                "text": "Où est-ce que c'est ?"
+            }
+        ]
     },
     {
         "id": 3,
@@ -36,7 +54,16 @@
             "dislike": 0,
             "love": 20
         },
-        "comments": ["C'est tellement relaxant.", "Ça a l'air paisible."]
+        "comments": [
+            {
+                "username": "mike_rose ",
+                "text": "C'est tellement relaxant."
+            },
+            {
+                "username": "alice_lee ",
+                "text": "Ça a l'air paisible."
+            }
+        ]
     },
     {
         "id": 4,
@@ -49,7 +76,16 @@
             "dislike": 3,
             "love": 18
         },
-        "comments": ["J'adore cette ambiance !", "Le café a l'air délicieux."]
+        "comments": [
+            {
+                "username": "laura_k ",
+                "text": "J'adore cette ambiance !"
+            },
+            {
+                "username": "sarah_g ",
+                "text": "Le café a l'air délicieux."
+            }
+        ]
     },
     {
         "id": 5,
@@ -62,7 +98,16 @@
             "dislike": 0,
             "love": 11
         },
-        "comments": ["Quel livre lis-tu ?", "Rien de tel qu'une lecture au calme."]
+        "comments": [
+            {
+                "username": "julie_m ",
+                "text": "Quel livre lis-tu ?"
+            },
+            {
+                "username": "mark_t ",
+                "text": "Rien de tel qu'une lecture au calme."
+            }
+        ]
     },
     {
         "id": 6,
@@ -75,7 +120,16 @@
             "dislike": 2,
             "love": 25
         },
-        "comments": ["Quelle vue magnifique !", "Je rêve de faire ça."]
+        "comments": [
+            {
+                "username": "emma_w ",
+                "text": "Quelle vue magnifique !"
+            },
+            {
+                "username": "luis_r ",
+                "text": "Je rêve de faire ça."
+            }
+        ]
     },
     {
         "id": 7,
@@ -88,7 +142,16 @@
             "dislike": 1,
             "love": 19
         },
-        "comments": ["Le street art est toujours fascinant.", "Où est-ce que tu as pris cette photo ?"]
+        "comments": [
+            {
+                "username": "kyle_p ",
+                "text": "Le street art est toujours fascinant."
+            },
+            {
+                "username": "olivia_d ",
+                "text": "Où est-ce que tu as pris cette photo ?"
+            }
+        ]
     },
     {
         "id": 8,
@@ -101,7 +164,16 @@
             "dislike": 0,
             "love": 28
         },
-        "comments": ["Le ciel est magnifique !", "C'est tellement apaisant."]
+        "comments": [
+            {
+                "username": "james_k ",
+                "text": "Le ciel est magnifique !"
+            },
+            {
+                "username": "lucy_b ",
+                "text": "C'est tellement apaisant."
+            }
+        ]
     },
     {
         "id": 9,
@@ -114,7 +186,16 @@
             "dislike": 0,
             "love": 17
         },
-        "comments": ["Bonne chance !", "On est avec toi !"]
+        "comments": [
+            {
+                "username": "sophie_w ",
+                "text": "Bonne chance !"
+            },
+            {
+                "username": "mark_r ",
+                "text": "On est avec toi !"
+            }
+        ]
     },
     {
         "id": 10,
@@ -127,6 +208,15 @@
             "dislike": 1,
             "love": 22
         },
-        "comments": ["Ça a l'air incroyable !", "Tu profites bien !"]
+        "comments": [
+            {
+                "username": "maria_d ",
+                "text": "Ça a l'air incroyable !"
+            },
+            {
+                "username": "henry_t ",
+                "text": "Tu profites bien !"
+            }
+        ]
     }
 ]

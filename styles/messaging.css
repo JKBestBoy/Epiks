@@ -1,0 +1,253 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0e5ec;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+}
+
+/* Barre de navigation */
+header {
+    background-color: #e0e5ec;
+    position: fixed;
+    top: 0;
+    left: 25%; /* Décalage pour la sidebar, ajuste selon la largeur de la sidebar */
+    width: 75%; /* La largeur restante après la sidebar */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center;
+}
+
+/* Titre */
+.title-link {
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: #000; /* Change la couleur du texte à noir */
+    flex-grow: 1; /* Permet de centrer le titre */
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 2rem; /* Ajuste la taille du titre selon vos préférences */
+    font-weight: bold; /* Rend le texte du titre en gras */
+    color: #000; /* Assure que le titre soit noir */
+}
+
+/* Lien Profil à droite */
+.profile-link {
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: #000; /* Assure que le texte est noir */
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+
+
+/* Menu latéral gauche */
+.sidebar {
+    width: 25%; /* Largeur de la sidebar */
+    padding: 1.5em;
+    box-shadow: -10px -10px 30px #ffffff, 10px 10px 30px #eaece0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: #f0f0f3;
+    border-radius: 1em;
+    overflow-y: auto;
+    z-index: 5; /* Assure que la sidebar est derrière la barre de navigation */
+    max-height: 97%;
+}
+
+/* Liens dans la sidebar */
+.sidebar a {
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    padding: 0.8em 1.5em;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 30%;
+}
+
+.sidebar a:hover {
+    background-color: #e1e8f0;
+    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Liste des conversations dans la sidebar */
+.conversations-list h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style des éléments de conversation */
+.conversation {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres douces */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conversation:hover {
+    background-color: #f1f5fa; /* Couleur de fond plus foncée au survol */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.6); /* Ombre accentuée au survol */
+}
+
+.conversation .avatar {
+    margin-right: 10px;
+}
+
+.conversation .avatar img {
+    width: 35px; /* Réduit la taille de l'avatar */
+    height: 35px;
+    border-radius: 50%;
+}
+
+.conversation-info {
+    flex: 1;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+    margin: 0px;
+}
+
+.last-message {
+    font-size: 0.85rem;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.last-message .time {
+    font-size: 0.75rem;
+    color: #999;
+}
+
+/* Conversation active */
+.active-chat {
+    margin-left: 31%;
+    margin-top: 90px;
+    margin-right: 17px;
+    min-height: 72vh; /* Prend au moins 72% de la hauteur de la fenêtre */
+    background-color: #fff;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Organise les messages de manière verticale */
+    height: calc(100vh - 90px - 40px); /* Réduit la hauteur pour laisser de l'espace en bas */
+    overflow: hidden; /* Pour éviter les débordements */
+}
+
+/* Tête de la conversation active */
+/* Tête de la conversation active */
+.chat-header {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center; /* Aligne les éléments horizontalement */
+    flex-shrink: 0;
+}
+
+/* Image de profil */
+.profile-pic {
+    width: 40px; /* Taille de l'image de profil */
+    height: 40px; /* Taille de l'image de profil */
+    border-radius: 50%; /* Rend l'image circulaire */
+    margin-right: 10px; /* Espace entre l'image et le nom d'utilisateur */
+}
+
+/* Nom d'utilisateur */
+.username {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.messages {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    height: 100%; /* Prend toute la hauteur restante */
+    overflow-y: auto; /* Permet de faire défiler les messages si nécessaire */
+}
+
+.message {
+    margin-bottom: 15px;
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.message.received {
+    background-color: #f1f1f1;
+    margin-right: auto;
+}
+
+.message.sent {
+    background-color: #4d98ff;
+    color: white;
+    margin-left: auto;
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #666;
+    text-align: right;
+}
+
+.message-input {
+    display: flex;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.message-input textarea {
+    width: 100%;
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    resize: none;
+}
+
+.message-input button {
+    padding: 10px 15px;
+    background-color: #4d98ff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.message-input button:hover {
+    background-color: #395886;
+}

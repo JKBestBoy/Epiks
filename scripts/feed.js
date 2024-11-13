@@ -39,7 +39,7 @@ function createPostElement(post) {
         img.alt = "Post image";
         img.classList.add("post-image");
 
-        img.addEventListener("click", () => openModal(img.src));
+        img.addEventListener("click", (e) => openModal(img.src, e));
 
         postDiv.appendChild(img);
     }
@@ -54,15 +54,13 @@ function createPostElement(post) {
     const reactionsDiv = document.createElement("div");
     reactionsDiv.classList.add("reactions");
 
-    const likeButton = createReactionButton("👍", "like", post.id);
-    const dislikeButton = createReactionButton("👎", "dislike", post.id);
-    const loveButton = createReactionButton("❤️", "love", post.id);
-    const commentButton = createReactionButton("💬", "comment", post.id);
+    const likeButton = createReactionButton("fa-thin fa-thumbs-up", "like", post.id);
+    const dislikeButton = createReactionButton("fa-thin fa-thumbs-down", "dislike", post.id);
+    const loveButton = createReactionButton("fa-thin fa-heart", "love", post.id);
 
     reactionsDiv.appendChild(likeButton);
     reactionsDiv.appendChild(dislikeButton);
     reactionsDiv.appendChild(loveButton);
-    reactionsDiv.appendChild(commentButton);
 
     postDiv.appendChild(reactionsDiv);
 
@@ -109,21 +107,83 @@ function createPostElement(post) {
     return postDiv;
 }
 
-function createReactionButton(icon, reactionType, postId) {
+function createReactionButton(iconClass, reactionType, postId) {
     const button = document.createElement("button");
     button.classList.add("reaction-button");
-    button.innerHTML = `<span class="icon">${icon}</span>`;
-    button.addEventListener("click", () => handleReaction(postId, reactionType, button));
+    button.innerHTML = `<i class="fa ${iconClass}"></i>`;  // Utiliser l'icône FontAwesome Thin
+    button.addEventListener("click", (e) => handleReaction(postId, reactionType, button, e));
     return button;
 }
 
-function handleReaction(postId, reactionType, button) {
-    const icon = button.querySelector(".icon");
+function handleReaction(postId, reactionType, button, event) {
+    const icon = button.querySelector("i");
     if (icon) {
         icon.classList.add("heartbeat");
         setTimeout(() => {
             icon.classList.remove("heartbeat");
         }, 400);
+
+        // Créer des particules à chaque clic, et s'assurer qu'elles sont positionnées autour du bouton
+        createParticles(button, event);
+    }
+}
+
+function createParticles(button, event) {
+    const rect = button.getBoundingClientRect();  // Récupère les coordonnées et les dimensions du bouton
+
+    const centerX = rect.left + rect.width / 2;  // Calculer le centre du bouton
+    const centerY = rect.top + rect.height / 2;
+
+    const numberOfParticles = 30;  // Nombre de particules à créer
+
+    // Injecter les keyframes dans le style pour les particules
+    const styleSheet = document.styleSheets[0];
+
+    for (let i = 0; i < numberOfParticles; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+
+        // Calculer une direction aléatoire pour chaque particule
+        const angle = Math.random() * 2 * Math.PI;  // Angle aléatoire entre 0 et 2PI
+        const distance = Math.random() * 50 + 20;  // Distance aléatoire entre 20px et 50px
+        const x = distance * Math.cos(angle);  // Déplacement horizontal
+        const y = distance * Math.sin(angle);  // Déplacement vertical
+
+        // Placer la particule initialement au centre du bouton
+        particle.style.position = 'absolute';
+        particle.style.left = `${centerX - 4}px`;  // Centrer la particule sur le bouton
+        particle.style.top = `${centerY - 4}px`;   // Centrer la particule sur le bouton
+        particle.style.width = '8px'; // Largeur de la particule
+        particle.style.height = '8px'; // Hauteur de la particule
+        particle.style.backgroundColor = '#ff4d94'; // Couleur de la particule
+        particle.style.borderRadius = '50%'; // Faire de la particule un cercle
+        particle.style.pointerEvents = 'none'; // Assurer que les particules ne bloquent pas d'autres événements
+
+        // Appliquer une direction dynamique via JavaScript
+        const keyframe = `@keyframes particle-animation-${i} {
+            0% {
+                transform: translate(0, 0) scale(1);  /* Départ à la taille normale */
+                opacity: 1;
+            }
+            100% {
+                transform: translate(${x}px, ${y}px) scale(0);  /* Rétrécissement et déplacement */
+                opacity: 0;  /* Disparition */
+            }
+        }`;
+
+        // Ajouter la règle @keyframes dynamiquement au style
+        styleSheet.insertRule(keyframe, styleSheet.cssRules.length);
+
+        // Appliquer l'animation CSS via la classe générée
+        particle.style.animation = `particle-animation-${i} 1s ease-out forwards`;
+
+        // Ajouter la particule au body
+        document.body.appendChild(particle);
+
+        // Supprimer la particule après l'animation
+        setTimeout(() => {
+            particle.remove();
+        }, 1000); // Attendre la fin de l'animation (1s)
     }
 }
 
@@ -153,7 +213,6 @@ function createCommentElement(comment) {
     commentText.textContent = `: ${comment.text}`;
     commentDiv.appendChild(commentText);
 
-    // Ajouter un bouton pour répondre
     const replyButton = document.createElement("button");
     replyButton.classList.add("comment-reply-button");
     replyButton.textContent = "Répondre";
@@ -162,7 +221,6 @@ function createCommentElement(comment) {
         commentInput.value = `@${comment.username} `;
         commentInput.focus();
 
-        // Ajout de la section pour les réponses si elle n'existe pas encore
         let repliesSection = commentDiv.querySelector(".replies");
         if (!repliesSection) {
             repliesSection = document.createElement("div");
@@ -173,7 +231,6 @@ function createCommentElement(comment) {
 
     commentDiv.appendChild(replyButton);
 
-    // Ajouter un conteneur pour les sous-commentaires (réponses)
     const repliesSection = document.createElement("div");
     repliesSection.classList.add("replies");
     commentDiv.appendChild(repliesSection);
@@ -181,7 +238,7 @@ function createCommentElement(comment) {
     return commentDiv;
 }
 
-function openModal(imageSrc) {
+function openModal(imageSrc, event) {
     const modal = document.createElement("div");
     modal.classList.add("modal");
 

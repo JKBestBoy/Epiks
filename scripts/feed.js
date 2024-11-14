@@ -131,50 +131,58 @@ function handleReaction(postId, reactionType, button, event) {
 function createParticles(button, event) {
     const rect = button.getBoundingClientRect();  // Récupère les coordonnées et les dimensions du bouton
 
+    // Ajouter le défilement (scroll) à la position de l'élément
+    const offsetY = window.scrollY || document.documentElement.scrollTop;
+
     const centerX = rect.left + rect.width / 2;  // Calculer le centre du bouton
-    const centerY = rect.top + rect.height / 2;
+    const centerY = rect.top + rect.height / 2 + offsetY;  // Ajuster en tenant compte du défilement
 
     const numberOfParticles = 30;  // Nombre de particules à créer
 
-    // Injecter les keyframes dans le style pour les particules
-    const styleSheet = document.styleSheets[0];
+    // Créer un élément <style> pour ajouter des règles CSS dynamiquement
+    let style = document.querySelector("style");
 
+    if (!style) {
+        style = document.createElement("style");
+        document.head.appendChild(style);  // Ajouter le style au <head>
+    }
+
+    // Ajouter des keyframes pour l'animation des particules
+    let keyframes = "";
     for (let i = 0; i < numberOfParticles; i++) {
-        const particle = document.createElement("div");
-        particle.classList.add("particle");
-
-        // Calculer une direction aléatoire pour chaque particule
-        const angle = Math.random() * 2 * Math.PI;  // Angle aléatoire entre 0 et 2PI
+        const angle = Math.random() * 2 * Math.PI;
         const distance = Math.random() * 50 + 20;  // Distance aléatoire entre 20px et 50px
         const x = distance * Math.cos(angle);  // Déplacement horizontal
         const y = distance * Math.sin(angle);  // Déplacement vertical
 
-        // Placer la particule initialement au centre du bouton
-        particle.style.position = 'absolute';
-        particle.style.left = `${centerX - 4}px`;  // Centrer la particule sur le bouton
-        particle.style.top = `${centerY - 4}px`;   // Centrer la particule sur le bouton
-        particle.style.width = '8px'; // Largeur de la particule
-        particle.style.height = '8px'; // Hauteur de la particule
-        particle.style.backgroundColor = '#ff4d94'; // Couleur de la particule
-        particle.style.borderRadius = '50%'; // Faire de la particule un cercle
-        particle.style.pointerEvents = 'none'; // Assurer que les particules ne bloquent pas d'autres événements
-
-        // Appliquer une direction dynamique via JavaScript
-        const keyframe = `@keyframes particle-animation-${i} {
+        keyframes += `@keyframes particle-animation-${i} {
             0% {
-                transform: translate(0, 0) scale(1);  /* Départ à la taille normale */
+                transform: translate(0, 0) scale(1);
                 opacity: 1;
             }
             100% {
-                transform: translate(${x}px, ${y}px) scale(0);  /* Rétrécissement et déplacement */
-                opacity: 0;  /* Disparition */
+                transform: translate(${x}px, ${y}px) scale(0);
+                opacity: 0;
             }
         }`;
+    }
 
-        // Ajouter la règle @keyframes dynamiquement au style
-        styleSheet.insertRule(keyframe, styleSheet.cssRules.length);
+    // Insérer les règles CSS dynamiques dans le <style>
+    style.innerHTML += keyframes;
 
-        // Appliquer l'animation CSS via la classe générée
+    // Créer et animer les particules
+    for (let i = 0; i < numberOfParticles; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+
+        // Placer la particule initialement au centre du bouton
+        particle.style.left = `${centerX - 4}px`;
+        particle.style.top = `${centerY - 4}px`;
+
+         // Définir la couleur de la particule (par exemple, rose clair)
+        particle.style.backgroundColor = '#B1C9EF'; // Changez cette valeur pour la couleur désirée
+
+        // Appliquer l'animation CSS via la règle générée
         particle.style.animation = `particle-animation-${i} 1s ease-out forwards`;
 
         // Ajouter la particule au body
@@ -183,9 +191,9 @@ function createParticles(button, event) {
         // Supprimer la particule après l'animation
         setTimeout(() => {
             particle.remove();
-        }, 1000); // Attendre la fin de l'animation (1s)
+        }, 1000);  // Attendre la fin de l'animation (1s)
     }
-}
+} 
 
 function addComment(postId, commentText, commentsSection) {
     if (commentText) {

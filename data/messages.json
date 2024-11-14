@@ -1,0 +1,194 @@
+{
+  "conversations": [
+    {
+      "id": 1,
+      "username": "LoUdAwG🇺🇸🌴",
+      "profile_pic": "images/profil_pic/1.webp",
+      "last_message": "Vous: It keep it interesting 😂🤣",
+      "time": "1 h",
+      "messages": [
+        {
+          "sender": "User 1",
+          "text": "Hello, how are you?",
+          "time": "10:05 AM"
+        },
+        {
+          "sender": "You",
+          "text": "I'm good, thanks!",
+          "time": "10:06 AM"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "Tony Melo™",
+      "profile_pic": "images/profil_pic/2.webp",
+      "last_message": "A aimé un message",
+      "time": "1 j",
+      "messages": [
+        {
+          "sender": "User 2",
+          "text": "Nice!",
+          "time": "10:10 AM"
+        },
+        {
+          "sender": "You",
+          "text": "Thanks!",
+          "time": "10:12 AM"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "username": "Keyran",
+      "profile_pic": "images/profil_pic/3.webp",
+      "last_message": "Vous: Nice 😎",
+      "time": "2 j",
+      "messages": [
+        {
+          "sender": "Keyran",
+          "text": "Nice 😎",
+          "time": "9:15 AM"
+        },
+        {
+          "sender": "You",
+          "text": "I agree, looks awesome!",
+          "time": "9:20 AM"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "username": "ambre_k6",
+      "profile_pic": "images/profil_pic/4.webp",
+      "last_message": "Ambre a envoyé une pièce jointe.",
+      "time": "2 j",
+      "messages": [
+        {
+          "sender": "ambre_k6",
+          "text": "Check this out!",
+          "time": "11:00 AM"
+        },
+        {
+          "sender": "You",
+          "text": "Cool! What is it?",
+          "time": "11:05 AM"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "username": "yaya GAINZZ",
+      "profile_pic": "images/profil_pic/5.webp",
+      "last_message": "Yaya a quitté le groupe.",
+      "time": "2 j",
+      "messages": [
+        {
+          "sender": "yaya GAINZZ",
+          "text": "Hey everyone, I'll be back later!",
+          "time": "8:45 AM"
+        },
+        {
+          "sender": "You",
+          "text": "Alright, see you later!",
+          "time": "8:50 AM"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "username": "So Jah",
+      "profile_pic": "images/profil_pic/6.webp",
+      "last_message": "Vous: 🔥🔥🔥",
+      "time": "6 j",
+      "messages": [
+        {
+          "sender": "So Jah",
+          "text": "🔥🔥🔥",
+          "time": "3:00 PM"
+        },
+        {
+          "sender": "You",
+          "text": "Looking great! 🔥",
+          "time": "3:10 PM"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "username": "Fahad.",
+      "profile_pic": "images/profil_pic/7.webp",
+      "last_message": "A aimé un message",
+      "time": "1 sem.",
+      "messages": [
+        {
+          "sender": "Fahad.",
+          "text": "Good to hear from you!",
+          "time": "1:10 PM"
+        },
+        {
+          "sender": "You",
+          "text": "It's been a while, how's everything?",
+          "time": "1:12 PM"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "username": "whenever.01",
+      "profile_pic": "images/profil_pic/8.webp",
+      "last_message": "That's you ?",
+      "time": "1 sem.",
+      "messages": [
+        {
+          "sender": "whenever.01",
+          "text": "That's you in image?",
+          "time": "2:15 PM"
+        },
+        {
+          "sender": "You",
+          "text": "Yes, that's me!",
+          "time": "2:20 PM"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "username": "Youness Lam",
+      "profile_pic": "images/profil_pic/9.webp",
+      "last_message": "Youness a envoyé une pièce jointe.",
+      "time": "2 sem.",
+      "messages": [
+        {
+          "sender": "Youness Lam",
+          "text": "Here is the document I promised.",
+          "time": "9:30 AM"
+        },
+        {
+          "sender": "You",
+          "text": "Thanks! I'll check it out later.",
+          "time": "9:35 AM"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "username": "HAMSI G",
+      "profile_pic": "images/profil_pic/10.webp",
+      "last_message": "A envoyé un message",
+      "time": "3 sem.",
+      "messages": [
+        {
+          "sender": "HAMSI G",
+          "text": "Hello!",
+          "time": "4:45 PM"
+        },
+        {
+          "sender": "You",
+          "text": "Hey! How's everything?",
+          "time": "4:50 PM"
+        }
+      ]
+    }
+  ]
+}

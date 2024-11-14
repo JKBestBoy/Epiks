@@ -26,32 +26,28 @@
     <!-- Liste des conversations -->
     <section class="conversations-list">
         <h2>Messages</h2>
-        <ul id="conversations-list"></ul> <!-- Liste des conversations générée dynamiquement -->
+        <ul id="conversations-list">
+            <!-- Liste des conversations générée dynamiquement -->
+        </ul>
     </section>
 </aside>
 
-
     <!-- Contenu principal de la page des conversations -->
     <main class="chat-container">
-        
-
-
        <!-- Conversation active -->
-<section class="active-chat">
-    <div class="chat-header">
-        <img src="path/to/profile.jpg" alt="Photo de profil" class="profile-pic">
-        <h3 class="username">Nom de l'utilisateur</h3>
-    </div>
-    <div class="messages">
-        <!-- Les messages de la conversation active seront insérés ici -->
-    </div>
-    <div class="message-input">
-        <textarea placeholder="Écrire un message..."></textarea>
-        <button>Envoyer</button>
-    </div>
-</section>
-
-        
+       <section class="active-chat">
+            <div class="chat-header">
+                <img src="" alt="Photo de profil" class="profile-pic" id="active-profile-pic">
+                <h3 class="username" id="active-username">Nom de l'utilisateur</h3>
+            </div>
+            <div class="messages" id="active-messages">
+                <!-- Les messages de la conversation active seront insérés ici -->
+            </div>
+            <div class="message-input">
+                <textarea placeholder="Écrire un message..." id="message-input"></textarea>
+                <button id="send-button">Envoyer</button>
+            </div>
+        </section>
     </main>
 
     <script src="scripts/messaging.js"></script>

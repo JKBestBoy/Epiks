@@ -116,7 +116,6 @@ main {
     padding: 0;
     width: 80%;
     max-width: 400px;
-    background-color: #e0e5ec;
     border-radius: 25px;
 }
 
@@ -170,20 +169,30 @@ main {
     border-radius: 12px;
     padding: 5px 8px;         /* Réduit la taille du bouton de message */
     text-align: center;
-    background-color: #f1f5fa;
+    background-color: #B1C9EF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.5);
 }
 
 #friends-list .friend .message-link:hover {
-    background-color: #4d98ff;
+    background-color: #395886;
     color: white;
 }
 
+/* Style du bouton "Message" dans la liste des amis */
 .message-link {
-    text-decoration: none;
-    color: #4d98ff;
-    font-weight: 600;
-    padding: 5px 8px;
+    padding: 6px 15px; /* Espace à l'intérieur du bouton */
+    border-radius: 15px; /* Coins arrondis */
+    color: white; /* Couleur du texte */
+    font-size: 1rem; /* Taille du texte */
+    text-decoration: none; /* Enlève le soulignement */
+    display: inline-block; /* Pour permettre la mise en page correcte */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7); /* Ombre douce */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Lorsque l'on clique sur le bouton "Message" */
+.message-link:active {
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.7); /* Ombre interne au clic */
 }
 
 .friend.dragging {

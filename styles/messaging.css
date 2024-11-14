@@ -238,7 +238,7 @@ header {
 }
 
 .message.sent {
-    background-color: #4d98ff;
+    background-color: #395886;
     color: white;
     margin-left: auto;
 }
@@ -271,7 +271,7 @@ header {
 
 .message-input button {
     padding: 10px 15px;
-    background-color: #4d98ff;
+    background-color: #B1C9EF;
     color: white;
     border: none;
     border-radius: 10px;

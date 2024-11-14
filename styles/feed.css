@@ -1,211 +1,274 @@
 /* Styles généraux */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f4f8; /* Couleur de fond douce */
+    background-color: #e0e5ec;
     color: #333;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* Barre de navigation */
-header {
-    background-color: #ffffff; /* Fond blanc pour la barre de navigation */
+  }
+  
+  /* Barre de navigation principale */
+  header {
+    background-color: #e0e5ec;
+    padding: 1rem;
     position: fixed;
     top: 0;
-    left: 440px;
-    width: calc(100% - 250px);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombre douce */
+    left: 190px; /* Décalage pour éviter la sidebar */
+    width: calc(100% - 220px); /* Réduit la largeur pour ne pas recouvrir la sidebar */
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
-}
-
-/* Menu latéral gauche */
-.sidebar {
-    width: 400px;
+  }
+  
+  /* Lien et style du titre dans le header */
+  .title-link {
+    text-decoration: none;
+  }
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Lien du profil dans le header */
+  .profile-link {
+    position: absolute;
+    right: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 150px;
     padding: 20px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres marquées */
+    box-shadow: inset 4px 4px 8px #c9ced6, inset -4px -4px 8px #ffffff;
     display: flex;
     flex-direction: column;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     height: 100vh;
-    background-color: #1e1e2f; /* Fond sombre, couleur de la sidebar de la page d'accueil */
-    border-radius: 20px;
-}
-
-/* Liens de navigation dans la sidebar */
-.sidebar nav {
-    margin-bottom: 20px;
-}
-
-.sidebar a {
-    color: #ffffff; /* Texte blanc */
+    background-color: #e0e5ec;
+  }
+  
+  /* Liens dans la sidebar */
+  .sidebar a {
+    color: #333;
     text-decoration: none;
     font-weight: bold;
     margin-bottom: 20px;
-    padding: 12px 20px;
+    padding: 10px 20px;
     text-align: center;
-    border-radius: 12px;
-    background-color: #25273c; /* Fond clair pour chaque lien */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres douces */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sidebar a:hover {
-    background-color: #3e405a; /* Fond plus foncé au survol */
-    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres internes */
-}
-
-/* Liste des conversations dans la sidebar */
-.conversations-list h2 {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ffffff; /* Texte blanc */
-    margin-bottom: 10px;
-}
-
-/* Style des éléments de conversation */
-.conversation {
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
     display: flex;
-    align-items: center;
-    padding: 12px;
-    margin-bottom: 12px;
-    background-color: #25273c; /* Fond clair pour chaque conversation */
-    border-radius: 12px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres subtiles */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.conversation:hover {
-    background-color: #3e405a; /* Changement de couleur au survol */
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.6); /* Ombres accentuées au survol */
-}
-
-.conversation .avatar {
-    margin-right: 12px;
-}
-
-.conversation .avatar img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2), -3px -3px 8px rgba(255, 255, 255, 0.4);
-}
-
-.conversation-info {
+    justify-content: center;
+  }
+  
+  /* Zone de feed */
+  #feed {
     flex: 1;
-}
-
-.username {
-    font-weight: bold;
-    color: #ffffff; /* Texte blanc */
-}
-
-.last-message {
-    font-size: 0.85rem;
-    color: #b4b8c2; /* Texte plus clair pour les messages */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.last-message .time {
-    font-size: 0.75rem;
-    color: #999;
-}
-
-/* Conversation active */
-.active-chat {
-    margin-left: 400px;
-    margin-top: 20px;
-    min-height: 67vh;
-    flex-grow: 1;
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 100px auto 20px auto; 
     display: flex;
     flex-direction: column;
+    padding-left: 170px;
+  }
+  
+  /* Style des posts */
+  .post {
+    background-color: #e0e5ec;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 8px 8px 16px #c9ced6, -8px -8px 16px #ffffff;
+  }
+  
+  /* Header du post */
+  .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .post-header img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+  }
+  
+  .username {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Image du post */
+  .post-image {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+  }
+  
+  /* Footer du post avec les réactions */
+.reactions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
-/* Tête de la conversation active */
-.chat-header {
-    padding: 12px;
-    background-color: #f7f9fc;
-    border-radius: 12px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+.reaction-button {
+    background-color: #e0e5ec;
+    border: none;
+    box-shadow: 2px 2px 4px #c9ced6, -2px -2px 4px #ffffff;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-right: 8px;
 }
 
-.messages {
-    background-color: #f7f9fc;
-    padding: 20px;
-    margin-top: 20px;
+.reaction-button:active {
+    box-shadow: inset 2px 2px 4px #c9ced6, inset -2px -2px 4px #ffffff;
+}
+
+/* Affichage plein écran pour les images */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
-    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+/* Section des commentaires */
+.comments {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.comment {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+/* Container pour aligner le champ de texte et le bouton "Publier" sur la même ligne */
+.comment-container {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+}
+.comment-username {
+    font-weight: bold;  /* Met en gras le nom d'utilisateur */
+    color: #333;
+    margin-bottom: 3px;
+}
+/* Style du champ de texte pour le commentaire */
+.comment-input {
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 15px;
+    border: none;
+    background: #e0e5ec;
+    font-size: 1rem;
+    color: #333;
+    resize: none;
+    overflow: hidden;
+    outline: none;
+}
+/* Effet de focus pour le champ de commentaire */
+.comment-input:focus {
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6); /* Effet de focus avec un ombrage léger */
+}
+/* Bouton "Publier" dans la même ligne que l'input */
+.comment-submit-button {
+    height: 36px;
+    padding: 0 15px;
+    border-radius: 15px;
+    background-color: #B1C9EF; /* Couleur de fond douce */
+    color: #B1C9EF;
+    border: none;
+    font-size: 1rem;
+    margin-left: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+/* Lorsque le bouton est activé */
+.comment-submit-button.active {
+    background-color: #395886; /* Couleur quand le bouton est activé */
+    cursor: pointer;  /* Le curseur change pour pointer */
+}
+.comment-submit-button:active {
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.7);
 }
-
-.message {
-    margin-bottom: 15px;
-    max-width: 70%;
-    padding: 12px;
-    border-radius: 12px;
-    background-color: #f1f1f1;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+/* Styles généraux pour les réponses */
+.comment-reply-button {
+    color: #0066cc;
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 5px;
 }
-
-.message.received {
-    background-color: #f1f1f1;
-    margin-right: auto;
+/* Hover et active pour le bouton de réponse */
+.comment-reply-button:hover {
+    text-decoration: underline;
 }
-
-.message.sent {
-    background-color: #4d98ff;
-    color: white;
-    margin-left: auto;
-}
-
-.message-time {
-    font-size: 0.8rem;
-    color: #666;
-    text-align: right;
-}
-
-.message-input {
-    display: flex;
-    padding: 12px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
-}
-
-.message-input textarea {
+/* Style pour la zone de texte du commentaire */
+.comment-input {
     width: 100%;
-    height: 50px;
-    padding: 10px;
-    border-radius: 12px;
+    height: 25px;
+    padding: 5px;
+    border-radius: 15px;
     border: none;
-    background-color: #f1f1f1;
+    background: #e0e5ec;
+    font-size: 1rem;
+    color: #333;
     resize: none;
+    overflow: hidden;
+    outline: none;
 }
-
-.message-input button {
-    padding: 12px 18px;
-    background-color: #4d98ff;
+/* Focus pour la zone de texte */
+.comment-input:focus {
+    box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
+}
+/* Style du bouton "Publier" dans la même ligne que l'input */
+.comment-submit-button {
+    height: 36px;
+    padding: 0 15px;
+    border-radius: 15px;
+    background-color: #B1C9EF;
     color: white;
     border: none;
-    border-radius: 12px;
+    font-size: 1rem;
     margin-left: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease;
+}
+/* Lorsqu'il y a un commentaire dans l'input */
+.comment-submit-button.active {
+    background-color: #395886;
     cursor: pointer;
 }
-
-.message-input button:hover {
-    background-color: #395886;
+.comment-submit-button:active {
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.7);
 }

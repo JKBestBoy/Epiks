@@ -3,7 +3,7 @@
     {
       "id": 1,
       "username": "LoUdAwG🇺🇸🌴",
-      "profile_pic": "images/profil_pic/1.webp",
+      "profile_pic": "images/messages_images/1.webp",
       "last_message": "Vous: It keep it interesting 😂🤣",
       "time": "1 h",
       "messages": [
@@ -22,7 +22,7 @@
     {
       "id": 2,
       "username": "Tony Melo™",
-      "profile_pic": "images/profil_pic/2.webp",
+      "profile_pic": "images/messages_images/2.webp",
       "last_message": "A aimé un message",
       "time": "1 j",
       "messages": [
@@ -41,7 +41,7 @@
     {
       "id": 3,
       "username": "Keyran",
-      "profile_pic": "images/profil_pic/3.webp",
+      "profile_pic": "images/messages_images/3.JPG",
       "last_message": "Vous: Nice 😎",
       "time": "2 j",
       "messages": [
@@ -60,7 +60,7 @@
     {
       "id": 4,
       "username": "ambre_k6",
-      "profile_pic": "images/profil_pic/4.webp",
+      "profile_pic": "images/messages_images/4.webp",
       "last_message": "Ambre a envoyé une pièce jointe.",
       "time": "2 j",
       "messages": [
@@ -78,8 +78,8 @@
     },
     {
       "id": 5,
-      "username": "yaya GAINZZ",
-      "profile_pic": "images/profil_pic/5.webp",
+      "username": "Yaya GainZ",
+      "profile_pic": "images/messages_images/5.webp",
       "last_message": "Yaya a quitté le groupe.",
       "time": "2 j",
       "messages": [
@@ -98,7 +98,7 @@
     {
       "id": 6,
       "username": "So Jah",
-      "profile_pic": "images/profil_pic/6.webp",
+      "profile_pic": "images/messages_images/6.webp",
       "last_message": "Vous: 🔥🔥🔥",
       "time": "6 j",
       "messages": [
@@ -117,7 +117,7 @@
     {
       "id": 7,
       "username": "Fahad.",
-      "profile_pic": "images/profil_pic/7.webp",
+      "profile_pic": "images/messages_images/7.webp",
       "last_message": "A aimé un message",
       "time": "1 sem.",
       "messages": [
@@ -136,7 +136,7 @@
     {
       "id": 8,
       "username": "whenever.01",
-      "profile_pic": "images/profil_pic/8.webp",
+      "profile_pic": "images/messages_images/8.webp",
       "last_message": "That's you ?",
       "time": "1 sem.",
       "messages": [
@@ -154,8 +154,8 @@
     },
     {
       "id": 9,
-      "username": "Youness Lam",
-      "profile_pic": "images/profil_pic/9.webp",
+      "username": "Greg Lam",
+      "profile_pic": "images/messages_images/9.webp",
       "last_message": "Youness a envoyé une pièce jointe.",
       "time": "2 sem.",
       "messages": [
@@ -173,8 +173,8 @@
     },
     {
       "id": 10,
-      "username": "HAMSI G",
-      "profile_pic": "images/profil_pic/10.webp",
+      "username": "Mami",
+      "profile_pic": "images/messages_images/10.webp",
       "last_message": "A envoyé un message",
       "time": "3 sem.",
       "messages": [

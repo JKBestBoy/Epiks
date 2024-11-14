@@ -1,0 +1,187 @@
+/* Styles généraux pour la page d'amis */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0e5ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
+}
+
+/* Sidebar (comme sur la page Feed) */
+.sidebar {
+    width: 250px;
+    background-color: #e0e5ec; /* Fond clair */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 20px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.1), -8px -8px 15px rgba(255, 255, 255, 0.7); /* Ombre interne pour l'effet de relief */
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease; /* Transition fluide lors du survol */
+}
+
+/* Liens de navigation dans la sidebar */
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.sidebar a {
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+    border-radius: 10px;
+    background-color: #e0e5ec;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(255, 255, 255, 0.7); /* Ombres douces pour les liens */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* S'assurer que les liens ne dépassent pas */
+    box-sizing: border-box; /* Pour éviter que les paddings ajoutent à la largeur totale */
+}
+
+/* Au survol de l'élément de la sidebar */
+.sidebar a:hover {
+    background-color: #f0f0f0; /* Couleur de fond subtile pour le survol */
+    color: #333; /* Texte en couleur sombre */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.7); /* Ombre interne douce pour un effet de relief */
+    transform: translateY(-3px); /* Ajoute un léger déplacement pour l'effet de survol */
+}
+
+/* Barre de navigation (Header) */
+header {
+    width: calc(100% - 250px); /* La largeur de l'header prend toute la place restante après la sidebar */
+    height: 50px;
+    background-color: #e0e5ec;
+    position: fixed;
+    top: 0;
+    left: 290px; /* Décalage de 250px pour faire de la place à la sidebar */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombre douce */
+}
+
+header .title-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.profile-link {
+    text-decoration: none;
+    color: #4d98ff;
+}
+
+/* Liste d'amis et autres contenus */
+main {
+    margin-left: 400px;             /* Décale 'main' après la sidebar */
+    padding-top: 80px;              /* Décale 'main' pour compenser la hauteur du header */
+    width: calc(100% - 250px);      /* 'main' occupe la largeur restante après la sidebar */
+    box-sizing: border-box;        /* Inclut le padding et border dans la largeur de 'main' */
+}
+
+
+/* Champ de recherche */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+
+#search-input {
+    padding: 12px;
+    max-width: 80%;
+    background-color: #e0e5ec;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
+    color: #333;
+    font-size: 16px;
+
+}
+
+/* Liste d'amis */
+#friends-list {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    max-width: 400px;
+    background-color: #e0e5ec;
+    border-radius: 25px;
+}
+
+/* Styles pour chaque ami */
+.friend {
+    min-width: 220px;
+    background-color: #e0e5ec;
+    padding: 10px 15px;        /* Réduit l'espacement interne */
+    margin-bottom: 8px;        /* Réduit la marge entre les éléments */
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 8px 8px 15px #a3b1c6, -8px -8px 15px #ffffff;
+    transition: transform 0.2s ease, margin 0.2s ease;
+    font-size: 14px;           /* Réduit la taille de la police */
+}
+
+/* Effet de survol */
+.friend:hover {
+    box-shadow: inset 8px 8px 15px #a3b1c6, inset -8px -8px 15px #ffffff;
+    transform: scale(1.03);
+}
+
+.friend-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Réduit la taille de l'avatar */
+.friend-avatar {
+    width: 35px;              /* Réduit la largeur de l'avatar */
+    height: 35px;             /* Réduit la hauteur de l'avatar */
+    border-radius: 50%;       /* Garde l'avatar circulaire */
+    margin-right: 15px;
+}
+
+/* Réduit la taille du nom de l'ami */
+.friend-name {
+    font-size: 14px;          /* Réduit la taille du texte */
+    font-weight: bold;
+    color: #333;
+    margin-right: auto;
+}
+
+/* Champ de message d'ami */
+#friends-list .friend .message-link {
+    border-radius: 12px;
+    padding: 5px 8px;         /* Réduit la taille du bouton de message */
+    text-align: center;
+    background-color: #f1f5fa;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.5);
+}
+
+#friends-list .friend .message-link:hover {
+    background-color: #4d98ff;
+    color: white;
+}
+
+.message-link {
+    text-decoration: none;
+    color: #4d98ff;
+    font-weight: 600;
+    padding: 5px 8px;
+}

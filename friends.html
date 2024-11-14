@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste d'Amis</title>
+    <link rel="stylesheet" href="styles/friends.css">
+</head>
+<body>
+    <!-- Sidebar (comme sur la page Feed) -->
+    <aside class="sidebar">
+        <nav>
+            <a href="feed.html">Acceuil</a>
+            <a href="friends.html" class="active">Amis</a>
+            <a href="messaging.html">Messages</a>
+        </nav>
+    </aside>
+
+    <!-- Barre de navigation -->
+    <header>
+        <a href="feed.html" class="title-link">
+            <h1 class="title">Epiks</h1>
+        </a>
+        <a href="profile.html" class="profile-link">Profil</a>
+    </header>
+    <main>
+        <div>
+            <h1>Liste d'Amis</h1>
+            <input type="text" id="search-input" placeholder="Rechercher un ami...">
+        </div>
+        <ul id="friends-list">
+            <!-- Ami 1 -->
+            <li class="friend" draggable="true" data-id="1">
+                <div class="friend-info">
+                    <img src="images/messages_images/1.webp" alt="LoUdAwG🇺🇸🌴" class="friend-avatar">
+                    <span class="friend-name">LoUdAwG🇺🇸🌴</span>
+                    <a href="messaging.html?friend=1" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 2 -->
+            <li class="friend" draggable="true" data-id="2">
+                <div class="friend-info">
+                    <img src="images/messages_images/2.webp" alt="Tony Melo™" class="friend-avatar">
+                    <span class="friend-name">Tony Melo™</span>
+                    <a href="messaging.html?friend=2" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 3 -->
+            <li class="friend" draggable="true" data-id="3">
+                <div class="friend-info">
+                    <img src="images/messages_images/7.webp" alt="Fahad." class="friend-avatar">
+                    <span class="friend-name">Fahad.</span>
+                    <a href="messaging.html?friend=3" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 4 -->
+            <li class="friend" draggable="true" data-id="4">
+                <div class="friend-info">
+                    <img src="images/messages_images/4.webp" alt="Amber K6" class="friend-avatar">
+                    <span class="friend-name">Amber K6</span>
+                    <a href="messaging.html?friend=4" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 5 -->
+            <li class="friend" draggable="true" data-id="5">
+                <div class="friend-info">
+                    <img src="images/messages_images/5.webp" alt="Yaya Gainzz" class="friend-avatar">
+                    <span class="friend-name">Yaya Gainzz</span>
+                    <a href="messaging.html?friend=5" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 6 -->
+            <li class="friend" draggable="true" data-id="6">
+                <div class="friend-info">
+                    <img src="images/messages_images/6.webp" alt="So Jah" class="friend-avatar">
+                    <span class="friend-name">So Jah</span>
+                    <a href="messaging.html?friend=6" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 7 -->
+            <li class="friend" draggable="true" data-id="7">
+                <div class="friend-info">
+                    <img src="images/messages_images/3.JPG" alt="Keyran" class="friend-avatar">
+                    <span class="friend-name">Keyran</span>
+                    <a href="messaging.html?friend=7" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 8 -->
+            <li class="friend" draggable="true" data-id="8">
+                <div class="friend-info">
+                    <img src="images/messages_images/8.webp" alt="Whenever 01" class="friend-avatar">
+                    <span class="friend-name">Whenever 01</span>
+                    <a href="messaging.html?friend=8" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 9 -->
+            <li class="friend" draggable="true" data-id="9">
+                <div class="friend-info">
+                    <img src="images/messages_images/9.webp" alt="Greg Lam" class="friend-avatar">
+                    <span class="friend-name">Greg Lam</span>
+                    <a href="messaging.html?friend=9" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ami 10 -->
+            <li class="friend" draggable="true" data-id="10">
+                <div class="friend-info">
+                    <img src="images/messages_images/10.webp" alt="Mami" class="friend-avatar">
+                    <span class="friend-name">Hamsi G</span>
+                    <a href="messaging.html?friend=10" class="message-link">Message</a>
+                </div>
+            </li>
+            <!-- Ajoutez autant d'amis que vous le souhaitez ici -->
+        </ul>
+    </main>
+
+    <script src="scripts/friends.js"></script>
+</body>
+</html>

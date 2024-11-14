@@ -185,3 +185,20 @@ main {
     font-weight: 600;
     padding: 5px 8px;
 }
+
+.friend.dragging {
+    transform: translateY(10px); /* Ajustez selon vos préférences */
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Lorsque l'élément est survolé, les voisins doivent s'écarter */
+.friend:not(.dragging) {
+    transition: all 0.3s ease-in-out;
+}
+
+.friend.dragging + .friend,
+.friend.dragging ~ .friend {
+    transform: translateY(50px); /* Moins d'écart pour les voisins */
+    transition: transform 0.2s ease-in-out;
+}

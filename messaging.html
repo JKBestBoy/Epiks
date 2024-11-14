@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/messaging.css">
 </head>
 <body>
-
     <!-- Barre de navigation -->
     <header>
         <a href="feed.html" class="title-link">
@@ -15,27 +14,32 @@
         </a>
         <a href="profile.html" class="profile-link">Profil</a>
     </header>
-    
-<!-- Menu latéral gauche -->
-<aside class="sidebar">
-    <nav>
-        <a href="friends.html">Amis</a>
-        <a href="messaging.html" class="active">Messages</a>
-    </nav>
 
-    <!-- Liste des conversations -->
-    <section class="conversations-list">
-        <h2>Messages</h2>
-        <ul id="conversations-list">
-            <!-- Liste des conversations générée dynamiquement -->
-        </ul>
-    </section>
-</aside>
+    <!-- Menu latéral gauche -->
+    <aside class="sidebar">
+        <nav>
+            <a href="friends.html">Amis</a>
+            <a href="messaging.html" class="active">Messages</a>
+        </nav>
+
+        <!-- Liste des conversations -->
+        <section class="conversations-list">
+            <h2>Messages</h2>
+            <ul id="conversations-list">
+                <!-- Liste des conversations générée dynamiquement -->
+            </ul>
+        </section>
+    </aside>
 
     <!-- Contenu principal de la page des conversations -->
     <main class="chat-container">
-       <!-- Conversation active -->
-       <section class="active-chat">
+        <!-- Section lorsque aucune conversation n'est sélectionnée -->
+        <section class="active-chat" id="no-conversation">
+            <p>Sélectionnez une conversation pour commencer à discuter</p>
+        </section>
+
+        <!-- Conversation active -->
+        <section class="active-chat" id="active-chat">
             <div class="chat-header">
                 <img src="" alt="Photo de profil" class="profile-pic" id="active-profile-pic">
                 <h3 class="username" id="active-username">Nom de l'utilisateur</h3>
@@ -43,7 +47,7 @@
             <div class="messages" id="active-messages">
                 <!-- Les messages de la conversation active seront insérés ici -->
             </div>
-            <div class="message-input">
+            <div class="message-input" id="message-input-container">
                 <textarea placeholder="Écrire un message..." id="message-input"></textarea>
                 <button id="send-button">Envoyer</button>
             </div>

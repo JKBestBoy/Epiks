@@ -4,18 +4,28 @@
       "id": 1,
       "username": "LoUdAwG🇺🇸🌴",
       "profile_pic": "images/messages_images/1.webp",
-      "last_message": "Vous: It keep it interesting 😂🤣",
+      "last_message": "Vous: Bro, send it. I'm ready to level up my pizza game. This sounds like the future of food! 💯",
       "time": "1 h",
       "messages": [
         {
-          "sender": "User 1",
-          "text": "Hello, how are you?",
+          "sender": "LoUdAwG🇺🇸🌴",
+          "text": "Bro, I just made pizza with 3 ingredients and it’s lowkey better than the one from the pizzeria. Like, what even is life? 😂",
           "time": "10:05 AM"
         },
         {
           "sender": "You",
-          "text": "I'm good, thanks!",
+          "text": "Wait, only 3 ingredients?! You’re telling me this pizza is better than the legit stuff? No way!",
           "time": "10:06 AM"
+        },
+        {
+          "sender": "LoUdAwG🇺🇸🌴",
+          "text": "Fr. It’s all about the dough, cheese, and secret sauce. It’s simple but bomb. Gotta try it. I'll send you the recipe. 👀",
+          "time": "10:08 AM"
+        },
+        {
+          "sender": "You",
+          "text": "Bro, send it. I'm ready to level up my pizza game. This sounds like the future of food! 💯",
+          "time": "10:10 AM"
         }
       ]
     },
@@ -23,56 +33,71 @@
       "id": 2,
       "username": "Tony Melo™",
       "profile_pic": "images/messages_images/2.webp",
-      "last_message": "A aimé un message",
+      "last_message": "Vous: Bro, don't even get me started on the type of girl I’m into. She’s gotta be a 10/10. 😂",
       "time": "1 j",
       "messages": [
         {
-          "sender": "User 2",
-          "text": "Nice!",
-          "time": "10:10 AM"
-        },
-        {
+          "sender": "Tony Melo™",
+          "text": "Bro, don't even get me started on the type of girl I’m into. She’s gotta be a 10/10. 😂",
+          "time": "11:15 AM"
+      },
+      {
           "sender": "You",
-          "text": "Thanks!",
-          "time": "10:12 AM"
-        }
+          "text": "Lmao, you’re so picky! What’s the deal? What’s a 10/10 in Tony world?",
+          "time": "11:17 AM"
+      },
+      {
+          "sender": "Tony Melo™",
+          "text": "She’s gotta have the looks, obviously. But she also needs to be funny, chill, and be able to handle my jokes. 😎",
+          "time": "11:19 AM"
+      },
+      {
+          "sender": "You",
+          "text": "Ayyy, so basically you want a girl who can roast you back? 😂 I see you, Tony.",
+          "time": "11:22 AM"
+      }
       ]
     },
     {
       "id": 3,
       "username": "Keyran",
       "profile_pic": "images/messages_images/3.JPG",
-      "last_message": "Vous: Nice 😎",
+      "last_message": "Vous: En abajo.",
       "time": "2 j",
       "messages": [
         {
           "sender": "Keyran",
-          "text": "Nice 😎",
-          "time": "9:15 AM"
-        },
-        {
+          "text": "¿Dónde estás?",
+          "time": "9:00 AM"
+      },
+      {
           "sender": "You",
-          "text": "I agree, looks awesome!",
-          "time": "9:20 AM"
-        }
+          "text": "En abajo.",
+          "time": "9:02 AM"
+      }
       ]
     },
     {
       "id": 4,
       "username": "ambre_k6",
       "profile_pic": "images/messages_images/4.webp",
-      "last_message": "Ambre a envoyé une pièce jointe.",
+      "last_message": "Bah voyons...",
       "time": "2 j",
       "messages": [
         {
           "sender": "ambre_k6",
-          "text": "Check this out!",
-          "time": "11:00 AM"
+          "text": "Franchement, j'aimerais trop le sac Furla, mais mon budget c'est plutôt un sac H&M... 😅",
+          "time": "13:00 AM"
         },
         {
           "sender": "You",
-          "text": "Cool! What is it?",
-          "time": "11:05 AM"
+          "text": "Ouais, je vois le genre. Mais t'inquiète, les sac H&M font leur job, c'est juste moins classe. 😂",
+          "time": "13:05 AM"
+        },
+        {
+          "sender": "ambre_k6",
+          "text": "Bah voyons...",
+          "time": "13:40 AM"
         }
       ]
     },
@@ -80,17 +105,17 @@
       "id": 5,
       "username": "Yaya GainZ",
       "profile_pic": "images/messages_images/5.webp",
-      "last_message": "Yaya a quitté le groupe.",
+      "last_message": "Vous: Alr",
       "time": "2 j",
       "messages": [
         {
           "sender": "yaya GAINZZ",
-          "text": "Hey everyone, I'll be back later!",
+          "text": "I'll be back later",
           "time": "8:45 AM"
         },
         {
           "sender": "You",
-          "text": "Alright, see you later!",
+          "text": "Alr",
           "time": "8:50 AM"
         }
       ]
@@ -99,93 +124,98 @@
       "id": 6,
       "username": "So Jah",
       "profile_pic": "images/messages_images/6.webp",
-      "last_message": "Vous: 🔥🔥🔥",
+      "last_message": "โอเค รอเจอคุณนะ",
       "time": "6 j",
       "messages": [
         {
           "sender": "So Jah",
-          "text": "🔥🔥🔥",
+          "text": "คุณจะกลับมาเมืองไทยเมื่อไหร่?",
           "time": "3:00 PM"
-        },
-        {
+      },
+      {
           "sender": "You",
-          "text": "Looking great! 🔥",
+          "text": "ยังไม่แน่ใจเลย ต้องดูงานก่อน. แต่น่าจะเร็วๆ นี้แหละ",
           "time": "3:10 PM"
-        }
+      },
+      {
+          "sender": "So Jah",
+          "text": "โอเค รอเจอคุณนะ",
+          "time": "3:15 PM"
+      }
       ]
     },
     {
       "id": 7,
       "username": "Fahad.",
       "profile_pic": "images/messages_images/7.webp",
-      "last_message": "A aimé un message",
+      "last_message": "Bro, I ain't betray you. It ain't like that.",
       "time": "1 sem.",
       "messages": [
         {
-          "sender": "Fahad.",
-          "text": "Good to hear from you!",
-          "time": "1:10 PM"
-        },
-        {
           "sender": "You",
-          "text": "It's been a while, how's everything?",
+          "text": "Yo, you straight up betrayed me, bro. How you gonna do me like that? 💀",
+          "time": "1:10 PM"
+      },
+      {
+          "sender": "Fahad.",
+          "text": "Bro, I ain't betray you. It ain't like that.",
           "time": "1:12 PM"
-        }
+      }
       ]
     },
     {
       "id": 8,
       "username": "whenever.01",
       "profile_pic": "images/messages_images/8.webp",
-      "last_message": "That's you ?",
+      "last_message": "Vous: 本当に久しぶりだね！いいね、会おう！",
       "time": "1 sem.",
       "messages": [
         {
           "sender": "whenever.01",
-          "text": "That's you in image?",
+          "text": "久しぶりだね、また会わない？",
           "time": "2:15 PM"
-        },
-        {
+      },
+      {
           "sender": "You",
-          "text": "Yes, that's me!",
+          "text": "本当に久しぶりだね！いいね、会おう！",
           "time": "2:20 PM"
-        }
+      }
       ]
     },
     {
       "id": 9,
       "username": "Greg Lam",
       "profile_pic": "images/messages_images/9.webp",
-      "last_message": "Youness a envoyé une pièce jointe.",
+      "last_message": "Vous: Désolé, je sais que je ne suis pas très présente, je fait de mon mieux mdrr",
       "time": "2 sem.",
       "messages": [
         {
           "sender": "Youness Lam",
-          "text": "Here is the document I promised.",
+          "text": "Donne des nouvelle un peu seurette, ca fait un bout de temps que t'as disparue",
           "time": "9:30 AM"
-        },
-        {
+      },
+      {
           "sender": "You",
-          "text": "Thanks! I'll check it out later.",
+          "text": "Désolé, je sais que je ne suis pas très présente, je fait de mon mieux mdrr",
           "time": "9:35 AM"
-        }
+      }
       ]
     },
     {
       "id": 10,
       "username": "Mami",
       "profile_pic": "images/messages_images/10.webp",
-      "last_message": "A envoyé un message",
+      "last_message": "Vous: Ouais, ça va ! Je vais t'envoyer ça bientôt. Faut que je nettoie un peu avant. 😂",
       "time": "3 sem.",
       "messages": [
         {
-          "sender": "HAMSI G",
-          "text": "Hello!",
+          "sender": "Mami",
+          "text": "Alors, t'es bien installé ? Envoie-moi une vidéo de ton studio ! 🎥",
           "time": "4:45 PM"
         },
         {
           "sender": "You",
-          "text": "Hey! How's everything?",
+          "text": "Ouais, ça va ! Je vais t'envoyer ça bientôt. Faut que je nettoie un peu avant. 😂",
           "time": "4:50 PM"
         }
       ]

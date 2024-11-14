@@ -84,8 +84,10 @@ header {
 }
 
 .sidebar a:hover {
-    background-color: #e1e8f0;
-    box-shadow: inset 4px 4px 10px rgba(0, 0, 0, 0.1), inset -4px -4px 10px rgba(255, 255, 255, 0.7);
+    background-color: #f0f0f0; /* Couleur de fond subtile pour le survol */
+    color: #333; /* Texte en couleur sombre */
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.7); /* Ombre interne douce pour un effet de relief */
+    transform: translateY(-3px); /* Ajoute un léger déplacement pour l'effet de survol */
 }
 
 /* Liste des conversations dans la sidebar */
@@ -135,16 +137,36 @@ header {
 }
 
 .last-message {
-    font-size: 0.85rem;
-    color: #666;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    white-space: nowrap;         /* Empêche le texte de se décomposer sur plusieurs lignes */
+    overflow: hidden;            /* Cache le texte qui dépasse */
+    text-overflow: ellipsis;     /* Ajoute des "..." à la fin du texte trop long */
+    max-width: 200px;            /* Limite la largeur du texte à 200px, ajustable selon tes besoins */
 }
 
-.last-message .time {
-    font-size: 0.75rem;
-    color: #999;
+/* Affichage de l'heure du dernier message dans la liste des conversations */
+.conversation-time {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 10px;
+    align-self: flex-end;
+    display: inline-block;
+}
+
+#no-conversation {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+    display: block;  /* Par défaut, on affiche ce message */
+}
+
+/* Styles pour la section de la conversation active lorsqu'il n'y a pas de conversation sélectionnée */
+#active-messages {
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    color: #888; /* Couleur grise pour indiquer qu'il n'y a pas de conversation */
+    font-size: 15px;
 }
 
 /* Conversation active */
@@ -161,6 +183,12 @@ header {
     flex-direction: column; /* Organise les messages de manière verticale */
     height: calc(100vh - 90px - 40px); /* Réduit la hauteur pour laisser de l'espace en bas */
     overflow: hidden; /* Pour éviter les débordements */
+    display: none;
+}
+
+/* Afficher la section active-chat quand une conversation est sélectionnée */
+.active-chat.visible {
+    display: block;
 }
 
 /* Tête de la conversation active */
@@ -194,8 +222,7 @@ header {
     background-color: #fff;
     padding: 20px;
     margin-top: 20px;
-    height: 100%; /* Prend toute la hauteur restante */
-    overflow-y: auto; /* Permet de faire défiler les messages si nécessaire */
+    flex-grow: 1;
 }
 
 .message {
@@ -226,6 +253,10 @@ header {
     display: flex;
     padding: 10px;
     background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 66%;
+    margin-bottom: 25px;
 }
 
 .message-input textarea {
@@ -251,3 +282,4 @@ header {
 .message-input button:hover {
     background-color: #395886;
 }
+

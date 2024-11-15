@@ -211,3 +211,115 @@ main {
     transform: translateY(50px); /* Moins d'écart pour les voisins */
     transition: transform 0.2s ease-in-out;
 }
+
+/* Styles pour les smartphones (jusqu'à 768px) */
+@media (max-width: 768px) {
+    /* Sidebar */
+    .sidebar {
+        position: absolute; /* La sidebar devient un menu burger */
+        top: 0;
+        left: 0;
+        width: 60%; /* La sidebar occupe 60% de la largeur */
+        height: 100%;
+        transform: translateX(-100%); /* Par défaut, elle est cachée */
+        transition: transform 0.3s ease;
+        z-index: 10;
+        background-color: #e0e5ec;
+    }
+
+    .sidebar.open {
+        transform: translateX(0); /* Affiche la sidebar */
+    }
+
+    /* Header */
+    header {
+        width: 100%; /* Prend toute la largeur de la page */
+        height: 50px;
+        background-color: #e0e5ec;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 0 10px; /* Réduit le padding autour des éléments */
+        display: flex;
+        justify-content: space-between; /* Espacement égal entre le titre et le lien profil */
+        align-items: center; /* Centre verticalement les éléments */
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+        z-index: 1000;
+    }
+
+    /* Bouton burger pour afficher la sidebar */
+    .burger-menu {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Main */
+    main {
+        margin: 0;
+        padding: 70px 10px 10px;
+        width: 100%; /* Utilise toute la largeur */
+    }
+
+    /* Liste des amis */
+    #friends-list {
+        padding-top: 50px;
+        width: 95%; /* Utilise presque toute la largeur disponible */
+        margin: 0 auto; /* Centre la liste */
+    }
+
+    .friend {
+        flex-direction: column; /* Les éléments de chaque ami passent en colonne */
+        align-items: flex-start; /* Aligne les éléments à gauche */
+    }
+
+    .friend-avatar {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 5px; /* Espace avec le reste des éléments */
+    }
+
+    .friend-name {
+        font-size: 1rem; /* Texte plus grand pour la lisibilité */
+        margin-bottom: 5px;
+    }
+
+    .message-link {
+        font-size: 0.9rem; /* Taille adaptée */
+        width: 70%; /* Le bouton prend toute la largeur */
+        text-align: center;
+    }
+
+    .profile-link {
+        margin-right: 20px;
+    }
+
+    /* Boutons Message */
+.message-link {
+    display: inline-block; /* Assure un comportement cohérent */
+    padding: 6px 12px; /* Espacement interne réduit */
+    font-size: 0.9rem; /* Taille du texte ajustée */
+    border-radius: 15px; /* Coins arrondis */
+    text-align: center; /* Centre le texte dans le bouton */
+    text-decoration: none; /* Supprime le soulignement */
+    color: white; /* Couleur du texte */
+    background-color: #B1C9EF; /* Couleur de fond */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7); /* Ombre douce */
+    width: 80px; /* Taille fixe pour uniformiser la largeur */
+}
+
+/* Uniformisation du hover */
+.message-link:hover {
+    background-color: #395886; /* Couleur plus sombre au survol */
+    color: white;
+    cursor: pointer;
+}
+
+/* Ajustement des boutons au clic */
+.message-link:active {
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.7); /* Ombre interne */
+}
+
+}

@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.error('Erreur lors de l\'envoi du message au serveur :', error);
             });
         }
-        
-        
+
     
 });
+

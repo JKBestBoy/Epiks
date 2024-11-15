@@ -1,5 +1,5 @@
-/* Styles généraux */
-body {
+ /* Styles généraux */
+ body {
     font-family: Arial, sans-serif;
     background-color: #e0e5ec;
     color: #333;
@@ -33,7 +33,7 @@ header {
 }
 
 .title {
-    font-size: 2rem; /* Ajuste la taille du titre selon vos préférences */
+    font-size: 2.2vw; /* Ajuste la taille du titre selon vos préférences */
     font-weight: bold; /* Rend le texte du titre en gras */
     color: #000; /* Assure que le titre soit noir */
 }
@@ -43,7 +43,8 @@ header {
     text-decoration: none; /* Enlève le soulignement du lien */
     color: #000; /* Assure que le texte est noir */
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 5%;
+    font-size: 1.2vw;
 }
 
 
@@ -65,6 +66,7 @@ header {
     overflow-y: auto;
     z-index: 5; /* Assure que la sidebar est derrière la barre de navigation */
     max-height: 97%;
+    font-size: 1.1vw;
 }
 
 /* Liens dans la sidebar */
@@ -92,7 +94,7 @@ header {
 
 /* Liste des conversations dans la sidebar */
 .conversations-list h2 {
-    font-size: 1.3rem;
+    font-size: 1.5vw;
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -103,12 +105,14 @@ header {
     display: flex;
     align-items: center;
     padding: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 2%;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8); /* Ombres douces */
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .conversation:hover {
@@ -121,33 +125,35 @@ header {
 }
 
 .conversation .avatar img {
-    width: 35px; /* Réduit la taille de l'avatar */
-    height: 35px;
+    width: 3vw; /* Réduit la taille de l'avatar */
+    height: 3vw;
     border-radius: 50%;
 }
 
 .conversation-info {
-    flex: 1;
+    flex-grow: 1; /* Laisse le message prendre tout l'espace disponible */
+    overflow: hidden; /* Masque le texte débordant */
+    font-size: 0.9rem; /* Taille du texte */
+    text-overflow: ellipsis;
 }
 
 .username {
     font-weight: bold;
     color: #333;
     margin: 0px;
+    font-size: 1vw !important;
 }
 
 .last-message {
-    white-space: nowrap;         /* Empêche le texte de se décomposer sur plusieurs lignes */
-    overflow: hidden;            /* Cache le texte qui dépasse */
-    text-overflow: ellipsis;     /* Ajoute des "..." à la fin du texte trop long */
-    max-width: 200px;            /* Limite la largeur du texte à 200px, ajustable selon tes besoins */
+    text-overflow: ellipsis;
+    max-width: 60%; /* Largeur relative par défaut */
+    font-size: 1.1vw; /* Taille de police par défaut */
 }
 
 /* Affichage de l'heure du dernier message dans la liste des conversations */
 .conversation-time {
-    font-size: 0.8rem;
+    font-size: 1vw;
     color: #888;
-    margin-left: 10px;
     align-self: flex-end;
     display: inline-block;
 }
@@ -158,7 +164,7 @@ header {
     width: 75%; /* Prend tout l'espace restant après la sidebar */
     height: calc(100vh - 90px);
     padding: 20px;
-    font-size: 18px;
+    font-size: 1.3vw;
     color: #888; /* Couleur grise pour indiquer un état passif */
     display: block; /* Assurez-vous qu'il est affiché par défaut */
     margin-top: 90px; /* Ajustement pour éviter de chevaucher la barre de navigation */
@@ -239,9 +245,10 @@ header {
 
 .messages {
     background-color: #fff;
-    padding: 20px;
+    padding: 2%;
     margin-top: 20px;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 .message {
@@ -249,6 +256,7 @@ header {
     max-width: 70%;
     padding: 10px;
     border-radius: 10px;
+    font-size: 1vw;
 }
 
 .message.received {
@@ -263,7 +271,7 @@ header {
 }
 
 .message-time {
-    font-size: 0.8rem;
+    font-size: 0.8vw;
     color: #666;
     text-align: right;
 }
@@ -302,3 +310,102 @@ header {
     background-color: #395886;
 }
 
+@media (max-width: 768px) {
+    /* Le body passe en colonne */
+    body {
+        flex-direction: column;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        align-items: center;
+        position: relative;
+        margin-bottom: 10px;
+        justify-content: flex-start; /* Pour aligner correctement les éléments en haut */
+        padding: 10px;
+        width: 100%;
+        height: 30%; /* S'adapte à son contenu */
+        background-color: #f0f0f3;
+        transition: width 0.3s ease;
+    }
+
+    .sidebar nav a {
+        display: inline-block; /* Assure un bon comportement pour les liens */
+        text-decoration: none; /* Retire la décoration par défaut */
+        padding: 10px 15px; /* Ajoute du padding pour les liens */
+        font-size: 1rem; /* Taille de police ajustable */
+        color: #333; /* Couleur du texte */
+        transition: color 0.3s ease; /* Animation pour un effet au survol */
+        width: auto;
+    }
+
+    .conversations-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centre les conversations */
+        justify-content: flex-start;
+    }
+
+    .conversation {
+        width: 90%; /* Réduction de la largeur des conversations */
+        margin-bottom: 10px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    /* Chat container */
+    .chat-container {
+        display: flex;
+        flex-direction: column; /* Empile les enfants verticalement */
+        margin-top: 10px;
+        width: 100%; /* Prend toute la largeur */
+        flex-grow: 1; /* Prend l'espace restant sous la sidebar */
+        background-color: #fff;
+        transition: margin-left 0.3s ease;
+        height: 70%;
+    }
+
+    /* Section du chat actif */
+    .active-chat {
+        flex-grow: 1; /* Remplit tout l'espace disponible */
+        overflow: hidden; /* Empêche les débordements */
+        height: 70%; /* S'adapte à son contenu */
+        flex-direction: column;
+        margin: 0px;
+        height: calc(100vh - 10px - 50px); /* Ajuste la hauteur en fonction de la sidebar */
+    }
+
+    .message.sent {
+        margin-right: 50px;
+    }
+
+    .message-input {
+        width: 90%;
+        margin-bottom: 0%;
+    }
+
+    /* Suppression de la bordure pour "No Conversation" */
+    #no-conversation {
+        position: static; /* Supprime la position fixe */
+        width: 100%; /* Prend toute la largeur de l'écran */
+        height: 100vh; /* Prend toute la hauteur visible */
+        margin: 0; /* Supprime les marges */
+        padding: 0; /* Supprime le padding */
+        font-size: 1rem; /* Ajuste la taille du texte pour les petits écrans */
+        display: flex; /* Active Flexbox */
+        justify-content: center; /* Centre horizontalement */
+        align-items: center; /* Centre verticalement */
+        color: #888; /* Conserve la couleur grise */
+        border-radius: 0; /* Supprime les coins arrondis pour une meilleure adaptation */
+        box-shadow: none; /* Supprime les ombres pour un design plus simple */
+        background: none; /* Supprime le fond si nécessaire */
+    }
+
+}

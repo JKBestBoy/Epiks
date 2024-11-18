@@ -10,49 +10,55 @@ body {
 /* Barre de navigation principale */
 header {
     background-color: #e0e5ec;
-    padding: 1rem;
     position: fixed;
     top: 0;
-    left: 190px; /* Décalage pour éviter la sidebar */
-    width: calc(100% - 220px); /* Réduit la largeur pour ne pas recouvrir la sidebar */
-    box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
+    left: var(--sidebar-width, 20%); /* Ajuste automatiquement en fonction de la largeur de la sidebar */
+    width: calc(100% - var(--sidebar-width, 20%)); /* Largeur restante après la sidebar */
+    height: 70px; /* Hauteur fixe plus fine */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
     z-index: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Espace entre les éléments */
     align-items: center;
+    padding: 0 1rem; /* Padding horizontal uniquement pour limiter l'espacement interne */
+    box-sizing: border-box; /* Inclut le padding dans la hauteur totale */
 }
+
 
 /* Lien et style du titre dans le header */
 .title-link {
-    text-decoration: none;
+    position: absolute; /* Pour que le titre ne soit pas affecté par le flux */
+    left: 50%; /* Place le centre du titre au milieu du header */
+    transform: translateX(-50%); /* Recentre précisément le titre */
+    text-decoration: none; /* Retire le soulignement du lien */
 }
 .title {
-    font-size: 1.5rem;
+    font-size: 2vw;
     font-weight: bold;
     color: #333;
 }
 
 /* Lien du profil dans le header */
 .profile-link {
-    position: absolute;
-    right: 1rem;
+    position: absolute; /* Fixe l'élément "Profil" indépendamment */
+    right: 1rem; /* Aligné à droite avec un peu d'espace */
     color: #333;
     text-decoration: none;
 }
 
 /* Sidebar */
 .sidebar {
-    width: 150px;
-    padding: 20px;
-    box-shadow: inset 4px 4px 8px #c9ced6, inset -4px -4px 8px #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    width: var(--sidebar-width, 20%);
+    height: 100vh; /* Sidebar en mode desktop */
     background-color: #e0e5ec;
+    box-shadow: inset 4px 4px 8px #c9ced6, inset -4px -4px 8px #ffffff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Liens dans la sidebar */
@@ -60,7 +66,7 @@ header {
     color: #333;
     text-decoration: none;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin: 20px;
     padding: 10px 20px;
     text-align: center;
     border-radius: 10px;
@@ -72,11 +78,11 @@ header {
 /* Zone de feed */
 #feed {
     flex: 1;
-    max-width: 600px;
-    margin: 100px auto 20px auto;
+    max-width: 40vw; /* La largeur maximale prend 90% de la largeur de la fenêtre */
+    margin: 10vh auto 2vh auto; /* Espacements verticaux relatifs à la hauteur de la fenêtre */
     display: flex;
     flex-direction: column;
-    padding-left: 170px;
+    padding-left: 10vw; /* Décalage gauche basé sur la largeur de la fenêtre */
 }
 
 /* Style des posts */
@@ -97,8 +103,8 @@ header {
 
 .post-header img {
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 2.5em; /* Largeur fluide basée sur la taille de la police */
+    height: 2.5em; /* Hauteur égale pour conserver le ratio */
     margin-right: 10px;
     box-shadow: 4px 4px 8px #c9ced6, -4px -4px 8px #ffffff;
 }
@@ -106,6 +112,7 @@ header {
 .username {
     font-weight: bold;
     color: #333;
+    font-size: 1.5vw;
 }
 
 /* Image du post */
@@ -179,6 +186,7 @@ header {
     margin-bottom: 5px;
     padding: 5px;
     border-radius: 5px;
+    font-size: 1.2vw;
 }
 
 /* Container pour aligner le champ de texte et le bouton "Publier" sur la même ligne */
@@ -195,36 +203,23 @@ header {
 
 /* Style du champ de texte pour le commentaire */
 .comment-input {
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-    border-radius: 15px;
+    width: 90%; /* Largeur relative pour s'adapter à son conteneur */
+    height: 2vh; /* Hauteur fluide basée sur la hauteur de la fenêtre */
+    padding: 0.5em; /* Padding relatif basé sur la taille de la police */
+    border-radius: 1em; /* Coins arrondis relatifs à la taille de l'élément */
     border: none;
     background: #e0e5ec;
-    font-size: 1rem;
+    font-size: 1em; /* Taille de la police relative à la taille parente */
     color: #333;
-    resize: none;
-    overflow: hidden;
-    outline: none;
+    resize: none; /* Empêche le redimensionnement manuel */
+    overflow: hidden; /* Masque tout débordement */
+    outline: none; /* Supprime l'effet de contour par défaut */
+    font-size: 1.3vw;
 }
 
 /* Effet de focus pour le champ de commentaire */
 .comment-input:focus {
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6); /* Effet de focus avec un ombrage léger */
-}
-
-/* Bouton "Publier" dans la même ligne que l'input */
-.comment-submit-button {
-    height: 36px;
-    padding: 0 15px;
-    border-radius: 15px;
-    background-color: #B1C9EF; /* Couleur de fond douce */
-    color: #B1C9EF;
-    border: none;
-    font-size: 1rem;
-    margin-left: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
-    transition: background-color 0.3s ease;
 }
 
 /* Lorsque le bouton est activé */
@@ -241,7 +236,7 @@ header {
     color: #0066cc;
     background: none;
     border: none;
-    font-size: 0.9rem;
+    font-size: 0.9vw;
     cursor: pointer;
     margin-top: 5px;
 }
@@ -251,21 +246,6 @@ header {
     text-decoration: underline;
 }
 
-/* Style pour la zone de texte du commentaire */
-.comment-input {
-    width: 100%;
-    height: 25px;
-    padding: 5px;
-    border-radius: 15px;
-    border: none;
-    background: #e0e5ec;
-    font-size: 1rem;
-    color: #333;
-    resize: none;
-    overflow: hidden;
-    outline: none;
-}
-
 /* Focus pour la zone de texte */
 .comment-input:focus {
     box-shadow: 0px 0px 8px rgba(0, 123, 255, 0.6);
@@ -273,17 +253,18 @@ header {
 
 /* Style du bouton "Publier" dans la même ligne que l'input */
 .comment-submit-button {
-    height: 36px;
-    padding: 0 15px;
-    border-radius: 15px;
+    height: 4vh; /* Hauteur fluide basée sur la hauteur de la fenêtre */
+    padding: 0 1vw; /* Espacement horizontal fluide basé sur la largeur de la fenêtre */
+    border-radius: 2vh; /* Rayon de bordure fluide */
     background-color: #B1C9EF;
     color: white;
     border: none;
-    font-size: 1rem;
-    margin-left: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.7);
+    font-size: 1vw; /* Taille de police fluide */
+    margin-left: 2vw; /* Marge fluide */
+    box-shadow: 0.5vw 0.5vw 1.5vw rgba(0, 0, 0, 0.1), -0.5vw -0.5vw 1.5vw rgba(255, 255, 255, 0.7); /* Ombres fluides */
     transition: background-color 0.3s ease;
 }
+
 
 /* Lorsqu'il y a un commentaire dans l'input */
 .comment-submit-button.active {
@@ -292,4 +273,124 @@ header {
 }
 .comment-submit-button:active {
     box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.1), inset -5px -5px 15px rgba(255, 255, 255, 0.7);
-}   
+}  
+ 
+/* Smartphone (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Empile les sections */
+        align-items: center; /* Centre les sections horizontalement */
+    }
+
+    .title {
+        font-size: clamp(1.5rem, 5vw, 2vw); /* Taille minimale de 1.5rem, fluide, mais pas plus grande que 2vw */
+        font-weight: bold;
+        color: #333;
+        text-align: center; /* Pour s'assurer que le titre est centré horizontalement */
+    }
+    
+    /* Sidebar */
+    .sidebar {
+        display: flex;
+        position: fixed; /* Fixée en bas */
+        top: auto; /* Supprime la position en haut */
+        bottom: 0; /* Place la sidebar en bas de la fenêtre */
+        left: 0;
+        width: 100%; /* Prend toute la largeur de l'écran */
+        height: 60px; /* Hauteur adaptée pour un footer */
+        background-color: #e0e5ec;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Ombre subtile au-dessus */
+        justify-content: space-evenly; /* Espacement uniforme entre les liens */
+        align-items: center; /* Centre les éléments verticalement */
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+
+    .sidebar a {
+        width: 90px; /* Ajuste la largeur des liens */
+        margin: 0; /* Supprime les marges verticales */
+        padding: 10px 15px; /* Espacement interne des liens */
+        font-size: 0.9rem; /* Réduction de la taille de la police */
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* Ajustement des icônes (si utilisés dans la sidebar) */
+    .sidebar a i {
+        font-size: 1.2rem; /* Taille d'icône adaptée */
+    }
+
+    /* Bouton Burger dans le header */
+    .burger-menu {
+        display: block; /* Affiche le bouton burger */
+        font-size: 1.5rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        left: 10px;
+    }
+
+    /* Header */
+    header {
+        width: 100%; /* Prend toute la largeur de l'écran */
+        padding: 1rem 1.5rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #e0e5ec;
+        display: flex;
+        justify-content: space-between; /* Espacement entre le titre et le profil */
+        align-items: center;
+        z-index: 1000;
+    }
+
+    /* Feed */
+    #feed {
+        margin: 80px auto 20px auto; /* Ajuste le margin pour compenser le header */
+        padding: 0 10px; /* Réduction du padding sur mobile */
+        width: 100%; /* Utilise toute la largeur disponible */
+        max-width: 500px; /* Définit une limite de largeur pour centrer */
+        display: flex;
+        flex-direction: column; /* Aligne les posts en colonne */
+        align-items: center; /* Centre horizontalement les posts */
+    }
+
+    /* Post dans le feed */
+    .post {
+        padding: 10px;
+        margin: 10px 0;
+        width: 90%; /* Largeur fluide en pourcentage */
+        max-width: 500px; /* Limite de largeur pour garder une esthétique */
+    }
+
+    .post-header img {
+        width: 35px; /* Réduction de la taille des avatars */
+        height: 35px;
+    }
+
+    .username {
+        font-size: 1rem;
+    }
+
+    .reaction-button {
+        padding: 4px; /* Boutons plus petits */
+        font-size: 0.8rem;
+    }
+
+    .comment {
+        font-size: 0.6rem; /* Taille de base */
+    }
+
+    .comment-reply-button {
+        font-size: 0.4rem; /* Taille de base */
+    }
+
+    .comment-input {
+        font-size: 0.6rem; /* Taille de base */
+    }
+}
